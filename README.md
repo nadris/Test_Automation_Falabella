@@ -7,4 +7,4 @@ Test Automation Falabella
 •	Elegir método de pago giftCard y validar el mensaje final
 
 ![](resource/images/testng.png)
-asfasfafasfasg
+asfasf
