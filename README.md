@@ -5,3 +5,5 @@ Test Automation Falabella
 •	Ir a la “Bolsa” de compras, aumentar a 2 productos para comprar, agregar “Garantía Extendida” y luego presionar el botón “Ir a Comprar”.
 •	Validar el producto el valor en la página de despacho y el resumen del producto
 •	Elegir método de pago giftCard y validar el mensaje final
+
+![](resource/images/testng.png)
