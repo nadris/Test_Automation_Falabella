@@ -17,9 +17,9 @@ public class BaseTest {
         webDriver.get("https://www.google.com/");
     }
 
-    @AfterMethod
+    /*@AfterMethod
     public void tearDown(){
         if(webDriver != null)
             webDriver.quit();
-    }
+    }*/
 }

@@ -11,14 +11,14 @@ import tasks.SearchInGoogle;
 
 public class SearchGoogleTest extends BaseTest {
 
-    @Test
+    @Test ( priority = 1 )
     public void testSearchGoogle() {
 
         SearchInGoogle.as(webDriver,"Falabella Colombia");
         Assert.assertTrue(IsValidSearch.validSearch(webDriver));
     }
 
-    @Test
+    @Test ( priority = 2 )
     public void testDisplayHomePage() {
         SearchInGoogle.as(webDriver,"Falabella Colombia");
         EnterResultigPage.on(webDriver);
