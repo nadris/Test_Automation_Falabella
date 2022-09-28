@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 
 public class GetValue {
 
-    public static String value(WebDriver webDriver, By locator){
+    public static String from(WebDriver webDriver, By locator){
         return webDriver.findElement(locator).getText();
     }
 }
