@@ -7,7 +7,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class WaitUntilAlert {
     public static boolean isPresent(WebDriver webDriver){
         try {
-            WebDriverWait wait = new WebDriverWait(webDriver, 20);
+            WebDriverWait wait = new WebDriverWait(webDriver, 50);
             wait.until(ExpectedConditions.alertIsPresent());
             return true;
         }catch (Exception e){
