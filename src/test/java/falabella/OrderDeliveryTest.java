@@ -1,6 +1,7 @@
 package falabella;
 
 import base.BaseTest;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import tasks.*;
 
@@ -20,6 +21,7 @@ public class OrderDeliveryTest extends BaseTest {
         ClickPurchaseOrder.on(webDriver);
         IsDeliveryInstructionsDisplayed.form(webDriver);
         CompleteFormDeliveryInstructions.add(webDriver,"ANTIOQUIA","ANZA","ANZA");
+        Assert.assertTrue(IsDeliveryAddressDisplayed.on(webDriver));
     }
 
 }
