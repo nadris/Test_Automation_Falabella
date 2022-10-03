@@ -1,6 +1,5 @@
 package falabella;
 
-import actions.Click;
 import base.BaseTest;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -8,13 +7,13 @@ import tasks.*;
 
 public class ProductTest extends BaseTest {
 
-    String wordToSearch = "Falabella Colombia";
-    String productToSearch = "PS5";
+    String wordToSearch = "Falabella Peru";
+    String productToSearch = "PS4";
+    String productNameSelected = "PS4 Acc Dualshock 4 (Cuh-Zct2u) - Midnight Blue - Latam Sony";
     @Test( priority = 1 )
     public void SearchProduct() {
-
         SearchInGoogle.as(webDriver,wordToSearch);
-        EnterResultigPage.on(webDriver);
+        EnterResultingPage.on(webDriver);
         SearchProduct.as(webDriver, productToSearch);
         Assert.assertTrue(IsProductDisplayed.product(webDriver));
     }
@@ -23,7 +22,7 @@ public class ProductTest extends BaseTest {
     public void selectProductAndDisplayModal(){
 
         SearchInGoogle.as(webDriver,wordToSearch);
-        EnterResultigPage.on(webDriver);
+        EnterResultingPage.on(webDriver);
         SearchProduct.as(webDriver, productToSearch);
         IsProductDisplayed.product(webDriver);
         SelectProduct.as(webDriver);
@@ -32,12 +31,12 @@ public class ProductTest extends BaseTest {
 
     @Test( priority = 3 )
     public void confirmShoppingModal(){
-
         SearchInGoogle.as(webDriver,wordToSearch);
-        EnterResultigPage.on(webDriver);
+        EnterResultingPage.on(webDriver);
         SearchProduct.as(webDriver, productToSearch);
         IsProductDisplayed.product(webDriver);
         SelectProduct.as(webDriver);
+        IsShoppingModalDisplayed.modal(webDriver);
         ConfirmShoppingModal.on(webDriver);
         Assert.assertTrue(IsPurchaseOrderDisplayed.on(webDriver));
 
@@ -47,27 +46,30 @@ public class ProductTest extends BaseTest {
     public void verifyProductNameSelection(){
 
         SearchInGoogle.as(webDriver,wordToSearch);
-        EnterResultigPage.on(webDriver);
+        EnterResultingPage.on(webDriver);
         SearchProduct.as(webDriver, productToSearch);
         IsProductDisplayed.product(webDriver);
         SelectProduct.as(webDriver);
+        IsShoppingModalDisplayed.modal(webDriver);
         ConfirmShoppingModal.on(webDriver);
         IsPurchaseOrderDisplayed.on(webDriver);
-        Assert.assertTrue(IsProductSelected.verify(webDriver,"Consola Sony PS5 Digital 825GB"));
+        Assert.assertTrue(IsProductSelected.verify(webDriver,productNameSelected));
 
     }
 
     @Test(priority = 5)
     public void verifyClickPurchaseOrder(){
         SearchInGoogle.as(webDriver,wordToSearch);
-        EnterResultigPage.on(webDriver);
+        EnterResultingPage.on(webDriver);
         SearchProduct.as(webDriver, productToSearch);
         IsProductDisplayed.product(webDriver);
+        AcceptCookies.on(webDriver);
         SelectProduct.as(webDriver);
+        IsShoppingModalDisplayed.modal(webDriver);
         ConfirmShoppingModal.on(webDriver);
         IsPurchaseOrderDisplayed.on(webDriver);
         ClickPurchaseOrder.on(webDriver);
-        Assert.assertTrue(IsDeliveryInstructionsDisplayed.form(webDriver));
+        Assert.assertTrue(IsEmailInformationDisplayed.button(webDriver));
 
     }
 

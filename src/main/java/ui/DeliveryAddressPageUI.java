@@ -3,7 +3,7 @@ package ui;
 import org.openqa.selenium.By;
 
 public class DeliveryAddressPageUI {
-
+    //modal confiram direccion
     //public static By editAreaInput = By.id("editArea");
     public static By formAddress = By.id("fbra_checkoutDeliverAndCollect");
     public static By addressInput = By.id("address");

@@ -6,22 +6,27 @@ import org.testng.annotations.Test;
 import tasks.*;
 
 public class OrderDeliveryTest extends BaseTest {
-    String wordToSearch = "Falabella Colombia";
-    String productToSearch = "PS5";
+    String wordToSearch = "Falabella Peru";
+    String productToSearch = "PS4";
+
+    String productNameSelected = "PS4 Acc Dualshock 4 (Cuh-Zct2u) - Midnight Blue - Latam Sony";
 
     @Test(priority = 1)
-    public void completedFormDeliveryInstructions (){
+    public void emailInformationCompleted(){
         SearchInGoogle.as(webDriver,wordToSearch);
-        EnterResultigPage.on(webDriver);
+        EnterResultingPage.on(webDriver);
         SearchProduct.as(webDriver, productToSearch);
         IsProductDisplayed.product(webDriver);
+        AcceptCookies.on(webDriver);
         SelectProduct.as(webDriver);
+        IsShoppingModalDisplayed.modal(webDriver);
         ConfirmShoppingModal.on(webDriver);
         IsPurchaseOrderDisplayed.on(webDriver);
         ClickPurchaseOrder.on(webDriver);
-        IsDeliveryInstructionsDisplayed.form(webDriver);
-        CompleteFormDeliveryInstructions.add(webDriver,"ANTIOQUIA","ANZA","ANZA");
-        Assert.assertTrue(IsDeliveryAddressDisplayed.on(webDriver));
+        IsEmailInformationDisplayed.button(webDriver);
+        CompleteFormEmailInformation.add(webDriver, "automation2022@gmail.com");
+        Assert.assertTrue(IsAddressInformationDisplayed.modal(webDriver));
+        CompleteFormAddressInformation.add(webDriver,"AMAZONAS","BAGUA","ARAMANGO","CALLE 7","683","PISO 2");
     }
 
 }

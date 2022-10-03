@@ -7,7 +7,7 @@ import ui.ProductsPageUI;
 
 public class IsProductDisplayed {
 
-    public static boolean product(WebDriver driver) {
-        return WaitUntilElement.isPresent(driver, ProductsPageUI.product);
+    public static boolean product(WebDriver webDriver) {
+        return WaitUntilElement.isPresent(webDriver, ProductsPageUI.product);
     }
 }
