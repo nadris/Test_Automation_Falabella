@@ -13,11 +13,11 @@ import ui.EmailInformationPageUI;
 import java.io.IOException;
 
 public class CompleteFormAddressInformation {
-    public static void add(WebDriver driver, String department,String province, String district, String street, String streetNumber ,String reference ) throws IOException {
+    public static void add(WebDriver driver, String department,String province, String district, String street, String streetNumber ,String reference ) throws IOException, InterruptedException {
         VisibilityOfElementLocated.on(driver, AddressInformationModalUI.addressInformationModal);
-        SelectDropdown.on(driver,AddressInformationModalUI.department,department,AddressInformationModalUI.clickDepartament);
-        SelectDropdown.on(driver,AddressInformationModalUI.province,province,AddressInformationModalUI.clickProvince);
-        SelectDropdown.on(driver,AddressInformationModalUI.district,district,AddressInformationModalUI.clickDistrict);
+        SelectDropdown.on(driver,AddressInformationModalUI.department,department);
+        SelectDropdown.on(driver,AddressInformationModalUI.province,province);
+        SelectDropdown.on(driver,AddressInformationModalUI.district,district);
         Enter.text(driver,AddressInformationModalUI.street, street);
         Enter.text(driver, AddressInformationModalUI.streetNumber, streetNumber);
         Enter.text(driver, AddressInformationModalUI.reference, reference);

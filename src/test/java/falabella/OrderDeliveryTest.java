@@ -12,7 +12,7 @@ public class OrderDeliveryTest extends BaseTest {
     String productToSearch = "PS4";
 
     @Test(priority = 1)
-    public void emailInformationCompleted() throws IOException {
+    public void emailInformationCompleted() throws IOException, InterruptedException {
         SearchInGoogle.as(webDriver,wordToSearch);
         EnterResultingPage.on(webDriver);
         SearchProduct.as(webDriver, productToSearch);
@@ -26,8 +26,8 @@ public class OrderDeliveryTest extends BaseTest {
         IsEmailInformationDisplayed.button(webDriver);
         CompleteFormEmailInformation.add(webDriver, "automation2022@gmail.com");
         IsAddressInformationDisplayed.modal(webDriver);
-        CompleteFormAddressInformation.add(webDriver,"AMAZONAS","BAGUA","ARAMANGO","CALLE 7","683","PISO 2");
-        Assert.assertTrue();
+        CompleteFormAddressInformation.add(webDriver,"AREQUIPA","AREQUIPA","AREQUIPA","CALLE 7","683","PISO 2");
+        Assert.assertTrue(true);
     }
 
 }

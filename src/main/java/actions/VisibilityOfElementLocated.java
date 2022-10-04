@@ -7,7 +7,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class VisibilityOfElementLocated {
     public static void on (WebDriver webDriver, By locator){
-        WebDriverWait wait = new WebDriverWait(webDriver, 70);
+        WebDriverWait wait = new WebDriverWait(webDriver, 90);
         wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
     }
 
