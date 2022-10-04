@@ -11,7 +11,11 @@
 >
 >Elegir método de pago giftCard y validar el mensaje final
 
-![](resource/images/test.png)
+![](resource/images/falabella.png)
+
+![](resource/images/product.png)
+
+![](resource/images/address.png)
 
 # 👨‍💻 Tech stack
 Para el presente proyecto se utlizo el siguiente Tech Stack:
@@ -20,6 +24,7 @@ Para el presente proyecto se utlizo el siguiente Tech Stack:
 
 ## 👨‍💻 Authors
 
-### Never Adrian - Noemi Ancari
+### Never Adrian Sossa 
+### Noemi Rosario Ancari villacarani
 
 <br/>

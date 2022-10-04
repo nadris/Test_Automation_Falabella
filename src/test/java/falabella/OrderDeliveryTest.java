@@ -27,6 +27,7 @@ public class OrderDeliveryTest extends BaseTest {
         CompleteFormEmailInformation.add(webDriver, "automation2022@gmail.com");
         IsAddressInformationDisplayed.modal(webDriver);
         CompleteFormAddressInformation.add(webDriver,"AMAZONAS","BAGUA","ARAMANGO","CALLE 7","683","PISO 2");
+        Assert.assertTrue();
     }
 
 }
