@@ -41,6 +41,6 @@ El informe del proyecto se encuentra en la carpeta documentation dentro del repo
 ## ✍ Authors
 
 ### Never Adrian Sossa 
-### Noemi Rosario Ancari Villacarani
+### Noemi Rosario Ancari Villcarani
 
 <br/>
