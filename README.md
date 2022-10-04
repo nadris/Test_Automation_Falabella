@@ -1,4 +1,4 @@
-# 🧐 Proyecto de Módulo Test Automation
+# 🚀 Proyecto de Módulo Test Automation
 
 > Se debe automatizar la compra de un artículo con garantía extendida.
 >
@@ -17,12 +17,28 @@
 
 ![](resource/images/address.png)
 
-# 👨‍💻 Tech stack
-Para el presente proyecto se utlizo el siguiente Tech Stack:
+# 👨‍💻 Stack Tecnológico
 
-# 💛
+Para el presente proyecto se utilizó:
 
-## 👨‍💻 Authors
+* [The Screenplay Pattern](https://serenity-js.org/handbook/design/screenplay-pattern.html)
+* [Selenium automates browsers](https://www.selenium.dev/)
+* [TestNG testing framework](https://testng.org/doc/)
+* [Extent Reports in Selenium](https://mvnrepository.com/artifact/com.relevantcodes/extentreports)
+* [Apache Maven](https://maven.apache.org/)
+
+# 👨‍💻 Tools
+
+Se utilizó:
+
+* [IntelliJ IDEA Community](https://www.jetbrains.com/)
+* [Google Chrome](https://www.google.com/intl/es/chrome/)
+
+# 📒 Informe
+
+El informe del proyecto se encuentra en la carpeta documentation dentro del repositorio con nombre TRABAJO FINAL.docx.
+
+## ✍ Authors
 
 ### Never Adrian Sossa 
 ### Noemi Rosario Ancari Villacarani
