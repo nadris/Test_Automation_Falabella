@@ -17,6 +17,8 @@
 
 ![](resource/images/address.png)
 
+![](resource/images/testSuite.png)
+
 # 👨‍💻 Stack Tecnológico
 
 Para el presente proyecto se utilizó:
