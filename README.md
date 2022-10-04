@@ -25,6 +25,6 @@ Para el presente proyecto se utlizo el siguiente Tech Stack:
 ## 👨‍💻 Authors
 
 ### Never Adrian Sossa 
-### Noemi Rosario Ancari villacarani
+### Noemi Rosario Ancari Villacarani
 
 <br/>
