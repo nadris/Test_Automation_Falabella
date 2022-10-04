@@ -7,10 +7,11 @@ import ui.AddressInformationModalUI;
 
 public class SelectDropdown {
 
-    public static void on(WebDriver webDriver, By locator, String text){
+    public static void on(WebDriver webDriver, By locator, By clickLocator, String text) throws InterruptedException {
 
         webDriver.findElement(locator).sendKeys(text, Keys.DOWN);
-        VisibilityOfElementLocated.on(webDriver,locator);
-
+        VisibilityOfElementLocated.on(webDriver,clickLocator);
+        Click.on(webDriver,clickLocator);
+        Thread.sleep(5000);
     }
 }

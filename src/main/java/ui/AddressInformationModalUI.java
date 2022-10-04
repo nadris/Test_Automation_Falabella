@@ -11,6 +11,10 @@ public class AddressInformationModalUI {
     public static By street = By.id("testId-Input-street");
     public static By streetNumber = By.id("testId-Input-number");
     public static By reference =By.id("testId-Input-department");
+
+    public static By clickDepartament = By.id("testId-Dropdown-AREQUIPA");
+    public static By clickProvince = By.id("testId-Dropdown-AREQUIPA");
+    public static By clickDistrict = By.id("testId-Dropdown-AREQUIPA");
     public static By confirmAddressButton = By.id("testId-infoModalFooter-button");
 
 }

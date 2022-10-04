@@ -15,12 +15,12 @@ import java.io.IOException;
 public class CompleteFormAddressInformation {
     public static void add(WebDriver driver, String department,String province, String district, String street, String streetNumber ,String reference ) throws IOException, InterruptedException {
         VisibilityOfElementLocated.on(driver, AddressInformationModalUI.addressInformationModal);
-        SelectDropdown.on(driver,AddressInformationModalUI.department,department);
-        SelectDropdown.on(driver,AddressInformationModalUI.province,province);
-        SelectDropdown.on(driver,AddressInformationModalUI.district,district);
+        SelectDropdown.on(driver,AddressInformationModalUI.department,AddressInformationModalUI.clickDepartament,department);
+        SelectDropdown.on(driver,AddressInformationModalUI.province,AddressInformationModalUI.clickProvince,province);
+        SelectDropdown.on(driver,AddressInformationModalUI.district,AddressInformationModalUI.clickDistrict,district);
         Enter.text(driver,AddressInformationModalUI.street, street);
-        Enter.text(driver, AddressInformationModalUI.streetNumber, streetNumber);
-        Enter.text(driver, AddressInformationModalUI.reference, reference);
+        //Enter.text(driver, AddressInformationModalUI.streetNumber, streetNumber);
+        //Enter.text(driver, AddressInformationModalUI.reference, reference);
         ScreenShotHelper.takeScreenShotAndAdToHTMLReport(driver, Status.INFO, "AddAddressInformation");
         Click.on(driver, AddressInformationModalUI.confirmAddressButton);
     }

@@ -26,8 +26,8 @@ public class OrderDeliveryTest extends BaseTest {
         IsEmailInformationDisplayed.button(webDriver);
         CompleteFormEmailInformation.add(webDriver, "automation2022@gmail.com");
         IsAddressInformationDisplayed.modal(webDriver);
-        CompleteFormAddressInformation.add(webDriver,"AREQUIPA","AREQUIPA","AREQUIPA","CALLE 7","683","PISO 2");
-        Assert.assertTrue(true);
+        CompleteFormAddressInformation.add(webDriver,"Arequipa","Arequipa","Arequipa","CALLE 7","683","PISO 2");
+        Assert.assertTrue(IsConfirmFormAddressDisplayed.modal(webDriver));
     }
 
 }
