@@ -11,8 +11,10 @@ import java.io.IOException;
 
 public class IsConfirmFormAddressDisplayed {
 
-    public static boolean modal(WebDriver driver) throws IOException {
+    public static boolean modal(WebDriver driver) throws IOException, InterruptedException {
+        Thread.sleep(5000);
         ScreenShotHelper.takeScreenShotAndAdToHTMLReport(driver, Status.INFO, "IsConfirmFormAddressDisplayed");
-        return WaitUntilElement.isPresent(driver, ConfirmAddressModalUI.saveAddressInformationModal);
+        return WaitUntilElement.isPresent(driver, ConfirmAddressModalUI.saveButton);
+
     }
 }

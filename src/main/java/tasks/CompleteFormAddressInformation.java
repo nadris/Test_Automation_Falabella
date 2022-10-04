@@ -19,8 +19,8 @@ public class CompleteFormAddressInformation {
         SelectDropdown.on(driver,AddressInformationModalUI.province,AddressInformationModalUI.clickProvince,province);
         SelectDropdown.on(driver,AddressInformationModalUI.district,AddressInformationModalUI.clickDistrict,district);
         Enter.text(driver,AddressInformationModalUI.street, street);
-        //Enter.text(driver, AddressInformationModalUI.streetNumber, streetNumber);
-        //Enter.text(driver, AddressInformationModalUI.reference, reference);
+        Enter.text(driver, AddressInformationModalUI.streetNumber, streetNumber);
+        Enter.text(driver, AddressInformationModalUI.reference, reference);
         ScreenShotHelper.takeScreenShotAndAdToHTMLReport(driver, Status.INFO, "AddAddressInformation");
         Click.on(driver, AddressInformationModalUI.confirmAddressButton);
     }

@@ -5,6 +5,7 @@ import helper.ReportHelper;
 import helper.ScreenShotHelper;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
@@ -20,12 +21,27 @@ public class BaseTest {
     public static void setUpSuite() throws Exception {
         ReportHelper.init("resource", "Test");
     }
+
+    private String url="https://www.google.com/";
+    private String browser = "chrome";
     @BeforeMethod
-    public void setUp(Method method){
+    public void setUp(Method method) throws Exception {
+
+        switch (browser){
+            case "chrome":
+                System.setProperty("webdriver.chrome.driver", "resource/chromedriver.exe");
+                webDriver = new ChromeDriver();
+                break;
+            case "firefox":
+                System.setProperty("webdriver.gecko.driver", "resource/geckodriver.exe");
+                webDriver = new FirefoxDriver();
+                break;
+            default:
+                throw  new Exception( browser + "not support");
+        }
+
+        webDriver.get(url);
         ReportHelper.getInstance().startTest(method.getName());
-        System.setProperty("webdriver.chrome.driver","resource/chromedriver.exe");
-        webDriver = new ChromeDriver();
-        webDriver.get("https://www.google.com/");
     }
     @AfterMethod
     public void tearDown(ITestResult iTestResult){

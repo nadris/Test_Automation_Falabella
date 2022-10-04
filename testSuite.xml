@@ -1,0 +1,22 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite thread-count="1" verbose="1" name="Falabella Suite" >
+
+    <test name="searchGoogle">
+        <classes>
+            <class name="searchGoogle.SearchGoogleTest"/>
+        </classes>
+    </test>
+
+    <test name="ProductTest">
+        <classes>
+            <class name="falabella.ProductTest"/>
+        </classes>
+    </test>
+
+    <test name="OrderDeliveryTest">
+        <classes>
+            <class name="falabella.OrderDeliveryTest"/>
+        </classes>
+    </test>
+</suite>
