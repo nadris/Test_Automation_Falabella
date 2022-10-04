@@ -5,13 +5,15 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import tasks.*;
 
+import java.io.IOException;
+
 public class ProductTest extends BaseTest {
 
     String wordToSearch = "Falabella Peru";
     String productToSearch = "PS4";
     String productNameSelected = "PS4 Acc Dualshock 4 (Cuh-Zct2u) - Midnight Blue - Latam Sony";
     @Test( priority = 1 )
-    public void SearchProduct() {
+    public void SearchProduct() throws IOException {
         SearchInGoogle.as(webDriver,wordToSearch);
         EnterResultingPage.on(webDriver);
         SearchProduct.as(webDriver, productToSearch);
@@ -19,7 +21,7 @@ public class ProductTest extends BaseTest {
     }
 
     @Test( priority = 2 )
-    public void selectProductAndDisplayModal(){
+    public void selectProductAndDisplayModal() throws IOException {
 
         SearchInGoogle.as(webDriver,wordToSearch);
         EnterResultingPage.on(webDriver);
@@ -30,7 +32,7 @@ public class ProductTest extends BaseTest {
     }
 
     @Test( priority = 3 )
-    public void confirmShoppingModal(){
+    public void confirmShoppingModal() throws IOException {
         SearchInGoogle.as(webDriver,wordToSearch);
         EnterResultingPage.on(webDriver);
         SearchProduct.as(webDriver, productToSearch);
@@ -43,7 +45,7 @@ public class ProductTest extends BaseTest {
     }
 
     @Test(priority = 4)
-    public void verifyProductNameSelection(){
+    public void verifyProductNameSelection() throws IOException {
 
         SearchInGoogle.as(webDriver,wordToSearch);
         EnterResultingPage.on(webDriver);
@@ -58,7 +60,7 @@ public class ProductTest extends BaseTest {
     }
 
     @Test(priority = 5)
-    public void verifyClickPurchaseOrder(){
+    public void verifyClickPurchaseOrder() throws IOException {
         SearchInGoogle.as(webDriver,wordToSearch);
         EnterResultingPage.on(webDriver);
         SearchProduct.as(webDriver, productToSearch);
