@@ -1,4 +1,4 @@
-# 🚀 Proyecto de Módulo Test Automation
+# 🚀 Proyecto de Módulo Test Automation Falabella 
 
 > Se debe automatizar la compra de un artículo con garantía extendida.
 >
@@ -27,7 +27,7 @@ Para el presente proyecto se utilizó:
 * [Extent Reports in Selenium](https://mvnrepository.com/artifact/com.relevantcodes/extentreports)
 * [Apache Maven](https://maven.apache.org/)
 
-# 👨‍💻 Tools
+# 👨‍💻 Herramientas
 
 Se utilizó:
 
@@ -38,7 +38,7 @@ Se utilizó:
 
 El informe del proyecto se encuentra en la carpeta documentation dentro del repositorio con nombre TRABAJO FINAL.docx.
 
-## ✍ Authors
+## ✍ Autores
 
 * Never Adrian Sossa
 * Noemi Rosario Ancari Villcarani
